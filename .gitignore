@@ -35,6 +35,7 @@ dashboard/output/*
 
 # Credentials
 config/credentials.json
+config/credentials_google.json
 *.key
 *.pem
 
