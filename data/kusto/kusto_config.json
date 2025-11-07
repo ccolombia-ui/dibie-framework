@@ -1,0 +1,31 @@
+{
+  "cluster_uri": "https://your-cluster.kusto.windows.net",
+  "database": "dibie_financiero",
+  "tables": [
+    {
+      "name": "MaestroInstituciones",
+      "file": "maestro_instituciones.csv",
+      "rows": 22
+    },
+    {
+      "name": "UbicacionGeografica",
+      "file": "ubicacion_geografica.csv",
+      "rows": 22
+    },
+    {
+      "name": "HechosFinancieros",
+      "file": "hechos_financieros.csv",
+      "rows": 22
+    },
+    {
+      "name": "DimTiempo",
+      "file": "dim_tiempo.csv",
+      "rows": 22
+    }
+  ],
+  "authentication": {
+    "method": "AAD",
+    "tenant_id": "your-tenant-id",
+    "client_id": "your-client-id"
+  }
+}

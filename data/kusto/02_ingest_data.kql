@@ -1,0 +1,37 @@
+
+// ============================================================
+// DIBIE - Ingesta de Datos desde CSV
+// ============================================================
+
+// Opción 1: Ingesta desde Azure Blob Storage
+// ----------------------------------------------------------
+.ingest into table MaestroInstituciones (
+    h'https://yourstorageaccount.blob.core.windows.net/dibie/maestro_instituciones.csv'
+) with (ignoreFirstRecord=true)
+
+.ingest into table UbicacionGeografica (
+    h'https://yourstorageaccount.blob.core.windows.net/dibie/ubicacion_geografica.csv'
+) with (ignoreFirstRecord=true)
+
+.ingest into table HechosFinancieros (
+    h'https://yourstorageaccount.blob.core.windows.net/dibie/hechos_financieros.csv'
+) with (ignoreFirstRecord=true)
+
+.ingest into table DimTiempo (
+    h'https://yourstorageaccount.blob.core.windows.net/dibie/dim_tiempo.csv'
+) with (ignoreFirstRecord=true)
+
+
+// Opción 2: Ingesta Inline (datos pequeños)
+// ----------------------------------------------------------
+// Ver archivo: 02_ingest_inline.kql
+
+
+// Opción 3: Ingesta desde local (Kusto Explorer)
+// ----------------------------------------------------------
+// 1. Abrir Kusto Explorer
+// 2. Conectar a tu cluster
+// 3. Click derecho en tabla → Ingest data
+// 4. Seleccionar archivo CSV
+// 5. Mapear columnas
+// 6. Ingerir

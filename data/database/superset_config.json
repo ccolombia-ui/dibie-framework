@@ -1,0 +1,56 @@
+{
+  "database_name": "DIBIE Financiero",
+  "sqlalchemy_uri": "sqlite:///C:\\aguila\\dibie\\data\\database\\dibie_financiero.db",
+  "dashboards": [
+    {
+      "name": "Análisis Financiero Instituciones",
+      "charts": [
+        {
+          "name": "Mapa de Instituciones",
+          "type": "deck_polygon",
+          "dataset": "v_instituciones_ubicacion",
+          "metrics": [
+            "COUNT(*)"
+          ],
+          "group_by": [
+            "municipio"
+          ]
+        },
+        {
+          "name": "Ingresos vs Egresos",
+          "type": "bar",
+          "dataset": "v_analisis_financiero",
+          "metrics": [
+            "SUM(INGRESOS)",
+            "SUM(EGRESOS)"
+          ],
+          "group_by": [
+            "nombre"
+          ]
+        },
+        {
+          "name": "Costo por Estudiante",
+          "type": "big_number",
+          "dataset": "v_analisis_financiero",
+          "metrics": [
+            "AVG(costo_por_estudiante)"
+          ]
+        },
+        {
+          "name": "Top 10 Instituciones por Ingresos",
+          "type": "table",
+          "dataset": "v_top_ingresos",
+          "metrics": [
+            "INGRESOS",
+            "total_ingresos"
+          ],
+          "group_by": [
+            "nombre",
+            "municipio"
+          ],
+          "limit": 10
+        }
+      ]
+    }
+  ]
+}

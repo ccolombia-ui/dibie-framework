@@ -1,0 +1,64 @@
+
+// ============================================================
+// DIBIE - Microsoft Fabric Kusto Database Schema
+// ============================================================
+// Fecha: 2025-11-07
+// Descripción: Esquema para análisis de datos financieros
+//              de instituciones educativas
+// ============================================================
+
+// 1. Tabla: MaestroInstituciones
+.create table MaestroInstituciones (
+    iebm_id: int,
+    dane_institucion: string,
+    nombre: string
+)
+
+// 2. Tabla: UbicacionGeografica
+.create table UbicacionGeografica (
+    institucion_id: int,
+    direccion: string,
+    municipio: string,
+    departamento: string,
+    latitud: real,
+    longitud: real
+)
+
+// 3. Tabla: HechosFinancieros
+.create table HechosFinancieros (
+    hecho_id: int,
+    institucion_id: int,
+    fecha_id: int,
+    valor_lote: real,
+    ingresos: real,
+    egresos: real,
+    total_ingresos: real,
+    ingresos_operacion: real,
+    valor_servicio_educativo: real,
+    ingresos_otros_cobros: real,
+    ingresos_no_operacionales: real
+)
+
+// 4. Tabla: DimTiempo
+.create table DimTiempo (
+    fecha_id: int,
+    institucion_id: int,
+    ano: int,
+    periodo: string,
+    numero_estudiantes: int,
+    costo_por_estudiante: real
+)
+
+// ============================================================
+// Políticas de Retención y Caché
+// ============================================================
+
+// Retención de 365 días
+.alter table MaestroInstituciones policy retention softdelete = 365d
+.alter table UbicacionGeografica policy retention softdelete = 365d
+.alter table HechosFinancieros policy retention softdelete = 365d
+.alter table DimTiempo policy retention softdelete = 365d
+
+// Caché activo de 30 días
+.alter table HechosFinancieros policy caching hot = 30d
+.alter table DimTiempo policy caching hot = 30d

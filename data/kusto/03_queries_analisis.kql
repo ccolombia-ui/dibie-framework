@@ -1,0 +1,111 @@
+
+// ============================================================
+// DIBIE - Queries de Análisis KQL
+// ============================================================
+
+// 1. Vista consolidada de instituciones con ubicación
+// ----------------------------------------------------------
+MaestroInstituciones
+| join kind=leftouter UbicacionGeografica on $left.iebm_id == $right.institucion_id
+| project iebm_id, dane_institucion, nombre, direccion, municipio, 
+          departamento, latitud, longitud
+
+
+// 2. Análisis financiero completo
+// ----------------------------------------------------------
+MaestroInstituciones
+| join kind=leftouter UbicacionGeografica on $left.iebm_id == $right.institucion_id
+| join kind=leftouter HechosFinancieros on $left.iebm_id == $right.institucion_id
+| join kind=leftouter DimTiempo on $left.iebm_id == $right.institucion_id
+| project nombre, municipio, ingresos, egresos, total_ingresos, 
+          balance = ingresos - egresos,
+          numero_estudiantes, costo_por_estudiante
+| order by ingresos desc
+
+
+// 3. Top 10 instituciones por ingresos
+// ----------------------------------------------------------
+HechosFinancieros
+| join kind=inner MaestroInstituciones on $left.institucion_id == $right.iebm_id
+| join kind=inner UbicacionGeografica on $left.institucion_id == $right.institucion_id
+| project nombre, municipio, ingresos, total_ingresos
+| top 10 by ingresos desc
+
+
+// 4. Distribución geográfica de instituciones
+// ----------------------------------------------------------
+UbicacionGeografica
+| summarize count() by municipio, departamento
+| order by count_ desc
+
+
+// 5. Análisis de costo por estudiante
+// ----------------------------------------------------------
+DimTiempo
+| join kind=inner MaestroInstituciones on $left.institucion_id == $right.iebm_id
+| where numero_estudiantes > 0
+| project nombre, numero_estudiantes, costo_por_estudiante
+| extend categoria = case(
+    costo_por_estudiante < 1000000, "Bajo",
+    costo_por_estudiante < 5000000, "Medio",
+    "Alto"
+)
+| summarize count() by categoria
+
+
+// 6. Mapa de calor - Instituciones por municipio
+// ----------------------------------------------------------
+UbicacionGeografica
+| where isnotempty(latitud) and isnotempty(longitud)
+| project municipio, latitud, longitud
+| render scatterchart with (kind=map)
+
+
+// 7. Tendencia financiera (si hubiera datos históricos)
+// ----------------------------------------------------------
+HechosFinancieros
+| join kind=inner DimTiempo on $left.institucion_id == $right.institucion_id
+| summarize 
+    avg_ingresos = avg(ingresos),
+    avg_egresos = avg(egresos),
+    total_instituciones = dcount(institucion_id)
+    by ano
+| order by ano asc
+
+
+// 8. Balance financiero por institución
+// ----------------------------------------------------------
+HechosFinancieros
+| join kind=inner MaestroInstituciones on $left.institucion_id == $right.iebm_id
+| extend balance = ingresos - egresos
+| extend estado = case(
+    balance > 0, "Superávit",
+    balance < 0, "Déficit",
+    "Equilibrio"
+)
+| project nombre, ingresos, egresos, balance, estado
+| order by balance desc
+
+
+// 9. Instituciones sin datos geográficos
+// ----------------------------------------------------------
+UbicacionGeografica
+| where isempty(latitud) or isempty(longitud)
+| join kind=inner MaestroInstituciones on $left.institucion_id == $right.iebm_id
+| project nombre, municipio, direccion
+
+
+// 10. Dashboard ejecutivo
+// ----------------------------------------------------------
+let total_ingresos = toscalar(HechosFinancieros | summarize sum(ingresos));
+let total_egresos = toscalar(HechosFinancieros | summarize sum(egresos));
+let total_instituciones = toscalar(MaestroInstituciones | count);
+let total_estudiantes = toscalar(DimTiempo | summarize sum(numero_estudiantes));
+
+print 
+    TotalInstituciones = total_instituciones,
+    TotalIngresos = total_ingresos,
+    TotalEgresos = total_egresos,
+    Balance = total_ingresos - total_egresos,
+    TotalEstudiantes = total_estudiantes,
+    CostoPromedioEstudiante = total_egresos / total_estudiantes

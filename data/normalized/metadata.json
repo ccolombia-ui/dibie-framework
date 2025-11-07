@@ -1,0 +1,63 @@
+{
+  "created_at": "2025-11-07T18:35:59.762060",
+  "source": "Google Sheets - Maestro Financiero",
+  "tables": {
+    "maestro_instituciones": {
+      "rows": 22,
+      "columns": [
+        "iebm_id",
+        "dane_institucion",
+        "nombre",
+        "direccion",
+        "municipio",
+        "departamento",
+        "latitud",
+        "longitud"
+      ],
+      "file": "maestro_instituciones.csv"
+    },
+    "ubicacion_geografica": {
+      "rows": 22,
+      "columns": [
+        "institucion_id",
+        "direccion",
+        "municipio",
+        "departamento",
+        "latitud",
+        "longitud"
+      ],
+      "file": "ubicacion_geografica.csv"
+    },
+    "hechos_financieros": {
+      "rows": 22,
+      "columns": [
+        "hecho_id",
+        "institucion_id",
+        "fecha_id",
+        "valor_lote",
+        "Recursos humanos",
+        "Resp. De Ingresos",
+        "INGRESOS",
+        "INGRESOS DE OPERACIÓN (2-6)",
+        "Valor anual servicio educativo (3+4+5)",
+        "INGRESOS POR OTROS COBROS",
+        "TOTAL INGRESOS (1+9)",
+        "EGRESOS",
+        "INGRESOS NO OPERACIONALES"
+      ],
+      "file": "hechos_financieros.csv"
+    },
+    "dim_tiempo": {
+      "rows": 22,
+      "columns": [
+        "fecha_id",
+        "institucion_id",
+        "ano",
+        "periodo",
+        "Numero de estudiantes (Total estudiantes matriculados el año anterior, incluyendo contratados con la secretaria)",
+        "Costo por estudiante año anterior (en pesos) (Subtotal costo / Número de estudiantes)"
+      ],
+      "file": "dim_tiempo.csv"
+    }
+  }
+}
