@@ -1,0 +1,49 @@
+# Logs directory
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (local only)
+data/cache/*
+data/processed/*
+!data/cache/.gitkeep
+!data/processed/.gitkeep
+
+# Dashboard output
+dashboard/output/*
+!dashboard/output/.gitkeep
+
+# Credentials
+config/credentials.json
+*.key
+*.pem
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
+*.egg-info/

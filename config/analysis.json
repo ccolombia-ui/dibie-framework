@@ -1,0 +1,23 @@
+{
+  "kusto": {
+    "cluster_uri": "",
+    "database": "",
+    "connection_timeout": 30
+  },
+  "eventstream": {
+    "workspace_id": "",
+    "eventstream_name": "dibie_data_stream",
+    "auto_create": true
+  },
+  "processing": {
+    "batch_size": 1000,
+    "parallel_workers": 4,
+    "enable_caching": true
+  },
+  "analysis_types": [
+    "descriptive_statistics",
+    "time_series",
+    "correlation_analysis",
+    "data_quality"
+  ]
+}

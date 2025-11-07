@@ -1,0 +1,31 @@
+{
+  "dashboard": {
+    "title": "DIBIE Analytics Dashboard",
+    "refresh_interval": 300,
+    "theme": "light"
+  },
+  "visualizations": {
+    "charts": [
+      {
+        "type": "time_series",
+        "title": "Data Trends",
+        "data_source": "processed_data"
+      },
+      {
+        "type": "bar_chart",
+        "title": "Category Distribution",
+        "data_source": "aggregated_data"
+      },
+      {
+        "type": "kpi_cards",
+        "title": "Key Metrics",
+        "metrics": ["total_records", "data_quality_score", "processing_time"]
+      }
+    ]
+  },
+  "export": {
+    "formats": ["html", "pdf", "json"],
+    "schedule": "daily",
+    "destination": "dashboard/output"
+  }
+}

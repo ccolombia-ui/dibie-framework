@@ -1,0 +1,36 @@
+# DIBIE Framework Requirements
+
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Data analysis and visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Microsoft Fabric integration (optional, configured via MCP)
+# azure-kusto-data>=4.3.0
+# azure-kusto-ingest>=4.3.0
+
+# Google Workspace integration (optional)
+# google-auth>=2.17.0
+# google-api-python-client>=2.80.0
+
+# Document processing
+# python-docx>=0.8.11
+# PyPDF2>=3.0.0
+# openpyxl>=3.1.0
+
+# Utilities
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# Logging and monitoring
+colorlog>=6.7.0
+
+# Development dependencies
+pytest>=7.3.0
+pytest-cov>=4.1.0
+black>=23.3.0
+flake8>=6.0.0

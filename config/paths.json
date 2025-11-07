@@ -1,0 +1,21 @@
+{
+  "google_drive": {
+    "local_path": "G:\\.shortcut-targets-by-id\\1fENbpuTdON265HSA0icoN8nHYS4gWJHF\\_rafEl\\aktriel\\10_calidad_educativa_ud",
+    "drive_url": "https://drive.google.com/drive/folders/12cMgVfMlNvFFAPmHpHg1JENw7k7iDQzD",
+    "folder_id": "12cMgVfMlNvFFAPmHpHg1JENw7k7iDQzD"
+  },
+  "data": {
+    "input_tables": "data/tables",
+    "input_documents": "data/documents",
+    "processed": "data/processed",
+    "cache": "data/cache"
+  },
+  "dashboard": {
+    "output": "dashboard/output",
+    "templates": "dashboard/templates"
+  },
+  "logs": {
+    "path": "logs",
+    "level": "INFO"
+  }
+}
