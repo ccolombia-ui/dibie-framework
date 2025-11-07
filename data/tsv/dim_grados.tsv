@@ -1,0 +1,13 @@
+grado_codigo	grado_nombre	grado_numero	nivel_educativo	orden	descripcion
+T	Transición	0	Preescolar	0	Grado de transición o jardín
+1	Primero	1	Primaria	1	Primer grado de primaria
+2	Segundo	2	Primaria	2	Segundo grado de primaria
+3	Tercero	3	Primaria	3	Tercer grado de primaria
+4	Cuarto	4	Primaria	4	Cuarto grado de primaria
+5	Quinto	5	Primaria	5	Quinto grado de primaria
+6	Sexto	6	Secundaria	6	Sexto grado - primer año de secundaria
+7	Séptimo	7	Secundaria	7	Séptimo grado - segundo año de secundaria
+8	Octavo	8	Secundaria	8	Octavo grado - tercer año de secundaria
+9	Noveno	9	Secundaria	9	Noveno grado - cuarto año de secundaria
+10	Décimo	10	Media	10	Décimo grado - primer año de media
+11	Once	11	Media	11	Once grado - último año de bachillerato
