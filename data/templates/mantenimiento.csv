@@ -1,0 +1,3 @@
+institucion_id,dane_institucion,anio,mes,tipo_mantenimiento,categoria,descripcion,area_intervenida,proveedor,valor_total,fecha_servicio,observaciones
+INST_1,EJEMPLO,2024,1,Preventivo,Edificaciones,Pintura de salones de clase,Bloque A - 10 salones,Empresa de Construcción,5000000,2024-01-20,Mantenimiento anual programado
+INST_1,EJEMPLO,2024,1,Correctivo,Equipos,Reparación sistema eléctrico,Laboratorio de cómputo,Electricista,800000,2024-01-12,Emergencia - falla en tablero

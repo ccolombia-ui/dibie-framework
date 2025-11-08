@@ -1,0 +1,4 @@
+institucion_id,dane_institucion,anio,mes,tipo_personal,categoria,numero_personas,salario_promedio_mensual,prestaciones_sociales_mes,bonificaciones_mes,aportes_seguridad_social_mes,aportes_parafiscales_mes,costo_total_mensual,observaciones
+INST_1,EJEMPLO,2024,1,Docente,Docente Tiempo Completo,15,3500000,1050000,200000,1225000,315000,6290000,Incluye prima de servicios
+INST_1,EJEMPLO,2024,1,Administrativo,Rector,1,6000000,1800000,500000,2100000,540000,10940000,
+INST_1,EJEMPLO,2024,1,Servicios Generales,Aseo y Mantenimiento,3,1300000,390000,0,455000,117000,2262000,

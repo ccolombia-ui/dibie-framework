@@ -1,0 +1,4 @@
+institucion_id,dane_institucion,anio,mes,tipo_servicio,proveedor,numero_factura,consumo,unidad_medida,valor_unitario,valor_total,fecha_pago,observaciones
+INST_1,EJEMPLO,2024,1,Energía Eléctrica,Empresa de Energía,001-2024-01,5000,kWh,450,2250000,2024-01-15,
+INST_1,EJEMPLO,2024,1,Agua y Alcantarillado,Acueducto Municipal,A-12345,250,m³,3200,800000,2024-01-20,
+INST_1,EJEMPLO,2024,1,Internet,Proveedor Internet,INT-001,1,plan,350000,350000,2024-01-05,Plan empresarial 100 Mbps

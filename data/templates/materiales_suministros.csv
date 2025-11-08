@@ -1,0 +1,4 @@
+institucion_id,dane_institucion,anio,mes,categoria,subcategoria,descripcion,cantidad,valor_unitario,valor_total,fecha_compra,observaciones
+INST_1,EJEMPLO,2024,1,Materiales Didácticos,Libros de Texto,Libros de matemáticas grado 5,80,45000,3600000,2024-01-15,
+INST_1,EJEMPLO,2024,1,Papelería y Oficina,Papel,Resmas de papel carta,50,12000,600000,2024-01-10,
+INST_1,EJEMPLO,2024,1,Aseo y Cafetería,Productos de Aseo,Kit de limpieza mensual,1,800000,800000,2024-01-05,"Incluye jabones, desinfectantes, escobas"

@@ -1,0 +1,4 @@
+institucion_id,dane_institucion,anio,mes,tipo_servicio,proveedor,numero_contrato,numero_estudiantes_beneficiados,costo_unitario_diario,dias_servicio,valor_total_mes,fecha_pago,observaciones
+INST_1,EJEMPLO,2024,1,Alimentación Escolar (PAE),Operador PAE,CONT-PAE-2024,800,4500,20,72000000,2024-01-30,Subsidiado por el Estado
+INST_1,EJEMPLO,2024,1,Transporte Escolar,Empresa de Transporte,CONT-TRANS-2024,200,5000,20,20000000,2024-01-25,
+INST_1,EJEMPLO,2024,1,Vigilancia y Seguridad,Empresa de Vigilancia,CONT-VIG-2024,0,0,30,3500000,2024-01-10,2 vigilantes 24/7
