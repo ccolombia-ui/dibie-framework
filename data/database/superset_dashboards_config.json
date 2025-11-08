@@ -1,0 +1,83 @@
+{
+  "database": {
+    "name": "DIBIE Financiero",
+    "sqlalchemy_uri": "sqlite:///C:\\aguila\\dibie\\data\\database\\dibie_financiero.db",
+    "description": "Base de datos de costos y matrícula de instituciones educativas"
+  },
+  "dashboards": [
+    {
+      "name": "Mapa de Costos por Institución",
+      "description": "Visualización geográfica de costos por estudiante",
+      "slices": [
+        {
+          "name": "Mapa de Calor - Costo por Estudiante",
+          "viz_type": "deck_geojson",
+          "datasource": "v_mapa_costos_institucion",
+          "params": {
+            "longitude": "longitud",
+            "latitude": "latitud",
+            "metric": "costo_por_estudiante",
+            "color_scheme": "superset_seq_2"
+          }
+        },
+        {
+          "name": "Marcadores por Institución",
+          "viz_type": "deck_scatter",
+          "datasource": "v_mapa_costos_institucion",
+          "params": {
+            "longitude": "longitud",
+            "latitude": "latitud",
+            "size": "total_estudiantes",
+            "color": "categoria_costo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dashboard Financiero",
+      "description": "Análisis detallado de costos operativos",
+      "slices": [
+        {
+          "name": "KPI - Costo Total",
+          "viz_type": "big_number_total",
+          "datasource": "v_resumen_costos_institucion",
+          "params": {
+            "metric": "SUM(costo_total)"
+          }
+        },
+        {
+          "name": "KPI - Costo por Estudiante Promedio",
+          "viz_type": "big_number",
+          "datasource": "v_resumen_costos_institucion",
+          "params": {
+            "metric": "AVG(costo_por_estudiante)"
+          }
+        },
+        {
+          "name": "Distribución de Costos",
+          "viz_type": "pie",
+          "datasource": "v_resumen_costos_institucion",
+          "params": {
+            "groupby": [
+              "institucion_nombre"
+            ],
+            "metric": "costo_total"
+          }
+        },
+        {
+          "name": "Evolución Mensual",
+          "viz_type": "line",
+          "datasource": "v_evolucion_costos_mensual",
+          "params": {
+            "x_axis": "mes",
+            "metrics": [
+              "costo_total",
+              "costo_personal",
+              "costo_servicios"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

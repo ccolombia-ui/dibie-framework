@@ -1,0 +1,23 @@
+{
+  "database": "C:\\aguila\\dibie\\data\\database\\dibie_financiero.db",
+  "created": "2025-11-07T20:55:17.395639",
+  "source": "Google Sheets + CSV local",
+  "spreadsheet_id": "1-E58T6yNokv6y7VS0m5tRihXwUdz4glKQVVDYA8wPLc",
+  "tables": {
+    "dim_grados": {
+      "records": 14
+    },
+    "hechos_matricula": {
+      "records": 308
+    },
+    "maestro_instituciones": {
+      "records": 22
+    },
+    "ubicacion_geografica": {
+      "records": 22
+    },
+    "hechos_financieros": {
+      "records": 22
+    }
+  }
+}
