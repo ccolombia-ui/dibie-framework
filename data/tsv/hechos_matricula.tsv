@@ -1,4 +1,7 @@
 dane_institucion	anio	grado_codigo	grado_nombre	nivel_educativo	cantidad_estudiantes
+INST_1	2024	PJ	Prejardín	Preescolar	0
+INST_1	2024	J	Jardín	Preescolar	0
+INST_1	2024	T	Transición	Preescolar	55
 INST_1	2024	1	Primero	Primaria	74
 INST_1	2024	2	Segundo	Primaria	69
 INST_1	2024	3	Tercero	Primaria	84
@@ -10,6 +13,9 @@ INST_1	2024	8	Octavo	Secundaria	87
 INST_1	2024	9	Noveno	Secundaria	73
 INST_1	2024	10	Décimo	Media	77
 INST_1	2024	11	Once	Media	85
+INST_2	2024	PJ	Prejardín	Preescolar	0
+INST_2	2024	J	Jardín	Preescolar	0
+INST_2	2024	T	Transición	Preescolar	0
 INST_2	2024	1	Primero	Primaria	0
 INST_2	2024	2	Segundo	Primaria	0
 INST_2	2024	3	Tercero	Primaria	0
@@ -21,6 +27,9 @@ INST_2	2024	8	Octavo	Secundaria	0
 INST_2	2024	9	Noveno	Secundaria	0
 INST_2	2024	10	Décimo	Media	0
 INST_2	2024	11	Once	Media	0
+INST_3	2024	PJ	Prejardín	Preescolar	0
+INST_3	2024	J	Jardín	Preescolar	23
+INST_3	2024	T	Transición	Preescolar	44
 INST_3	2024	1	Primero	Primaria	74
 INST_3	2024	2	Segundo	Primaria	60
 INST_3	2024	3	Tercero	Primaria	76
@@ -32,6 +41,9 @@ INST_3	2024	8	Octavo	Secundaria	88
 INST_3	2024	9	Noveno	Secundaria	98
 INST_3	2024	10	Décimo	Media	80
 INST_3	2024	11	Once	Media	72
+INST_4	2024	PJ	Prejardín	Preescolar	0
+INST_4	2024	J	Jardín	Preescolar	13
+INST_4	2024	T	Transición	Preescolar	21
 INST_4	2024	1	Primero	Primaria	31
 INST_4	2024	2	Segundo	Primaria	28
 INST_4	2024	3	Tercero	Primaria	35
@@ -43,6 +55,9 @@ INST_4	2024	8	Octavo	Secundaria	53
 INST_4	2024	9	Noveno	Secundaria	53
 INST_4	2024	10	Décimo	Media	51
 INST_4	2024	11	Once	Media	42
+INST_5	2024	PJ	Prejardín	Preescolar	0
+INST_5	2024	J	Jardín	Preescolar	21
+INST_5	2024	T	Transición	Preescolar	18
 INST_5	2024	1	Primero	Primaria	33
 INST_5	2024	2	Segundo	Primaria	35
 INST_5	2024	3	Tercero	Primaria	46
@@ -54,6 +69,9 @@ INST_5	2024	8	Octavo	Secundaria	45
 INST_5	2024	9	Noveno	Secundaria	53
 INST_5	2024	10	Décimo	Media	49
 INST_5	2024	11	Once	Media	45
+INST_6	2024	PJ	Prejardín	Preescolar	0
+INST_6	2024	J	Jardín	Preescolar	0
+INST_6	2024	T	Transición	Preescolar	36
 INST_6	2024	1	Primero	Primaria	48
 INST_6	2024	2	Segundo	Primaria	57
 INST_6	2024	3	Tercero	Primaria	58
@@ -65,6 +83,9 @@ INST_6	2024	8	Octavo	Secundaria	68
 INST_6	2024	9	Noveno	Secundaria	64
 INST_6	2024	10	Décimo	Media	66
 INST_6	2024	11	Once	Media	58
+INST_7	2024	PJ	Prejardín	Preescolar	0
+INST_7	2024	J	Jardín	Preescolar	0
+INST_7	2024	T	Transición	Preescolar	30
 INST_7	2024	1	Primero	Primaria	54
 INST_7	2024	2	Segundo	Primaria	49
 INST_7	2024	3	Tercero	Primaria	38
@@ -76,6 +97,9 @@ INST_7	2024	8	Octavo	Secundaria	67
 INST_7	2024	9	Noveno	Secundaria	59
 INST_7	2024	10	Décimo	Media	55
 INST_7	2024	11	Once	Media	58
+INST_8	2024	PJ	Prejardín	Preescolar	0
+INST_8	2024	J	Jardín	Preescolar	0
+INST_8	2024	T	Transición	Preescolar	20
 INST_8	2024	1	Primero	Primaria	37
 INST_8	2024	2	Segundo	Primaria	48
 INST_8	2024	3	Tercero	Primaria	54
@@ -87,6 +111,9 @@ INST_8	2024	8	Octavo	Secundaria	58
 INST_8	2024	9	Noveno	Secundaria	60
 INST_8	2024	10	Décimo	Media	61
 INST_8	2024	11	Once	Media	53
+INST_9	2024	PJ	Prejardín	Preescolar	0
+INST_9	2024	J	Jardín	Preescolar	21
+INST_9	2024	T	Transición	Preescolar	31
 INST_9	2024	1	Primero	Primaria	41
 INST_9	2024	2	Segundo	Primaria	45
 INST_9	2024	3	Tercero	Primaria	49
@@ -98,6 +125,9 @@ INST_9	2024	8	Octavo	Secundaria	42
 INST_9	2024	9	Noveno	Secundaria	68
 INST_9	2024	10	Décimo	Media	57
 INST_9	2024	11	Once	Media	44
+INST_10	2024	PJ	Prejardín	Preescolar	0
+INST_10	2024	J	Jardín	Preescolar	0
+INST_10	2024	T	Transición	Preescolar	16
 INST_10	2024	1	Primero	Primaria	50
 INST_10	2024	2	Segundo	Primaria	41
 INST_10	2024	3	Tercero	Primaria	52
@@ -109,6 +139,9 @@ INST_10	2024	8	Octavo	Secundaria	49
 INST_10	2024	9	Noveno	Secundaria	48
 INST_10	2024	10	Décimo	Media	36
 INST_10	2024	11	Once	Media	48
+INST_11	2024	PJ	Prejardín	Preescolar	0
+INST_11	2024	J	Jardín	Preescolar	24
+INST_11	2024	T	Transición	Preescolar	24
 INST_11	2024	1	Primero	Primaria	31
 INST_11	2024	2	Segundo	Primaria	32
 INST_11	2024	3	Tercero	Primaria	57
@@ -120,6 +153,9 @@ INST_11	2024	8	Octavo	Secundaria	39
 INST_11	2024	9	Noveno	Secundaria	55
 INST_11	2024	10	Décimo	Media	34
 INST_11	2024	11	Once	Media	40
+INST_12	2024	PJ	Prejardín	Preescolar	0
+INST_12	2024	J	Jardín	Preescolar	18
+INST_12	2024	T	Transición	Preescolar	15
 INST_12	2024	1	Primero	Primaria	28
 INST_12	2024	2	Segundo	Primaria	27
 INST_12	2024	3	Tercero	Primaria	34
@@ -131,6 +167,9 @@ INST_12	2024	8	Octavo	Secundaria	36
 INST_12	2024	9	Noveno	Secundaria	38
 INST_12	2024	10	Décimo	Media	23
 INST_12	2024	11	Once	Media	23
+INST_13	2024	PJ	Prejardín	Preescolar	0
+INST_13	2024	J	Jardín	Preescolar	0
+INST_13	2024	T	Transición	Preescolar	18
 INST_13	2024	1	Primero	Primaria	26
 INST_13	2024	2	Segundo	Primaria	19
 INST_13	2024	3	Tercero	Primaria	24
@@ -142,6 +181,9 @@ INST_13	2024	8	Octavo	Secundaria	21
 INST_13	2024	9	Noveno	Secundaria	20
 INST_13	2024	10	Décimo	Media	20
 INST_13	2024	11	Once	Media	18
+INST_14	2024	PJ	Prejardín	Preescolar	0
+INST_14	2024	J	Jardín	Preescolar	0
+INST_14	2024	T	Transición	Preescolar	40
 INST_14	2024	1	Primero	Primaria	60
 INST_14	2024	2	Segundo	Primaria	62
 INST_14	2024	3	Tercero	Primaria	49
@@ -153,6 +195,9 @@ INST_14	2024	8	Octavo	Secundaria	63
 INST_14	2024	9	Noveno	Secundaria	51
 INST_14	2024	10	Décimo	Media	48
 INST_14	2024	11	Once	Media	61
+INST_15	2024	PJ	Prejardín	Preescolar	0
+INST_15	2024	J	Jardín	Preescolar	0
+INST_15	2024	T	Transición	Preescolar	24
 INST_15	2024	1	Primero	Primaria	30
 INST_15	2024	2	Segundo	Primaria	37
 INST_15	2024	3	Tercero	Primaria	53
@@ -164,6 +209,9 @@ INST_15	2024	8	Octavo	Secundaria	50
 INST_15	2024	9	Noveno	Secundaria	60
 INST_15	2024	10	Décimo	Media	47
 INST_15	2024	11	Once	Media	44
+INST_16	2024	PJ	Prejardín	Preescolar	0
+INST_16	2024	J	Jardín	Preescolar	0
+INST_16	2024	T	Transición	Preescolar	33
 INST_16	2024	1	Primero	Primaria	38
 INST_16	2024	2	Segundo	Primaria	47
 INST_16	2024	3	Tercero	Primaria	44
@@ -175,6 +223,9 @@ INST_16	2024	8	Octavo	Secundaria	61
 INST_16	2024	9	Noveno	Secundaria	63
 INST_16	2024	10	Décimo	Media	60
 INST_16	2024	11	Once	Media	74
+INST_17	2024	PJ	Prejardín	Preescolar	0
+INST_17	2024	J	Jardín	Preescolar	0
+INST_17	2024	T	Transición	Preescolar	20
 INST_17	2024	1	Primero	Primaria	29
 INST_17	2024	2	Segundo	Primaria	21
 INST_17	2024	3	Tercero	Primaria	40
@@ -186,6 +237,9 @@ INST_17	2024	8	Octavo	Secundaria	35
 INST_17	2024	9	Noveno	Secundaria	38
 INST_17	2024	10	Décimo	Media	32
 INST_17	2024	11	Once	Media	27
+INST_18	2024	PJ	Prejardín	Preescolar	0
+INST_18	2024	J	Jardín	Preescolar	0
+INST_18	2024	T	Transición	Preescolar	0
 INST_18	2024	1	Primero	Primaria	0
 INST_18	2024	2	Segundo	Primaria	0
 INST_18	2024	3	Tercero	Primaria	0
@@ -197,6 +251,9 @@ INST_18	2024	8	Octavo	Secundaria	55
 INST_18	2024	9	Noveno	Secundaria	67
 INST_18	2024	10	Décimo	Media	52
 INST_18	2024	11	Once	Media	62
+INST_19	2024	PJ	Prejardín	Preescolar	0
+INST_19	2024	J	Jardín	Preescolar	0
+INST_19	2024	T	Transición	Preescolar	32
 INST_19	2024	1	Primero	Primaria	38
 INST_19	2024	2	Segundo	Primaria	33
 INST_19	2024	3	Tercero	Primaria	41
@@ -208,6 +265,9 @@ INST_19	2024	8	Octavo	Secundaria	34
 INST_19	2024	9	Noveno	Secundaria	45
 INST_19	2024	10	Décimo	Media	60
 INST_19	2024	11	Once	Media	37
+INST_20	2024	PJ	Prejardín	Preescolar	0
+INST_20	2024	J	Jardín	Preescolar	0
+INST_20	2024	T	Transición	Preescolar	49
 INST_20	2024	1	Primero	Primaria	64
 INST_20	2024	2	Segundo	Primaria	66
 INST_20	2024	3	Tercero	Primaria	63
@@ -219,6 +279,9 @@ INST_20	2024	8	Octavo	Secundaria	63
 INST_20	2024	9	Noveno	Secundaria	71
 INST_20	2024	10	Décimo	Media	69
 INST_20	2024	11	Once	Media	73
+INST_21	2024	PJ	Prejardín	Preescolar	0
+INST_21	2024	J	Jardín	Preescolar	0
+INST_21	2024	T	Transición	Preescolar	38
 INST_21	2024	1	Primero	Primaria	41
 INST_21	2024	2	Segundo	Primaria	44
 INST_21	2024	3	Tercero	Primaria	40
@@ -230,6 +293,9 @@ INST_21	2024	8	Octavo	Secundaria	37
 INST_21	2024	9	Noveno	Secundaria	42
 INST_21	2024	10	Décimo	Media	32
 INST_21	2024	11	Once	Media	37
+INST_22	2024	PJ	Prejardín	Preescolar	0
+INST_22	2024	J	Jardín	Preescolar	0
+INST_22	2024	T	Transición	Preescolar	24
 INST_22	2024	1	Primero	Primaria	42
 INST_22	2024	2	Segundo	Primaria	54
 INST_22	2024	3	Tercero	Primaria	58

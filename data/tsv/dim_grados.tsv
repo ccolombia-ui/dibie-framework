@@ -1,5 +1,7 @@
 grado_codigo	grado_nombre	grado_numero	nivel_educativo	orden	descripcion
-T	Transición	0	Preescolar	0	Grado de transición o jardín
+PJ	Prejardín	-2	Preescolar	-2	Grado de prejardín (primera infancia)
+J	Jardín	-1	Preescolar	-1	Grado de jardín (primera infancia)
+T	Transición	0	Preescolar	0	Grado de transición (preparación para primaria)
 1	Primero	1	Primaria	1	Primer grado de primaria
 2	Segundo	2	Primaria	2	Segundo grado de primaria
 3	Tercero	3	Primaria	3	Tercer grado de primaria

@@ -42,15 +42,35 @@ def extract_matricula_data():
     print(f"   ✓ {len(df)} filas, {len(df.columns)} columnas")
     
     # 3. Mostrar todas las columnas para identificar las de matrícula
-    print("\n2. Buscando columnas numeradas (1, 2, 3, etc.)...")
+    print("\n2. Buscando columnas de matrícula (Prejardín, Jardín, Transición, 1-11)...")
     
-    # Buscar columnas que sean solo números o terminen en número
+    # Buscar columnas en orden específico
     numeric_columns = []
+    grade_mapping = {}  # Mapear nombre de columna a código de grado
+    
     for col in df.columns:
         col_stripped = str(col).strip()
-        # Buscar columnas que sean exactamente un número del 1-11
-        if col_stripped in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']:
+        col_lower = str(col).lower()
+        
+        # Prejardín (grado -2)
+        if col_lower in ['prejardin', 'prejardín', 'pre-jardin', 'pre-jardín']:
             numeric_columns.append(col)
+            grade_mapping[col] = 'PJ'
+            print(f"   ✓ Encontrada: '{col}' → Prejardín")
+        # Jardín (grado -1)
+        elif col_lower in ['jardin', 'jardín']:
+            numeric_columns.append(col)
+            grade_mapping[col] = 'J'
+            print(f"   ✓ Encontrada: '{col}' → Jardín")
+        # Transición (grado 0)
+        elif 'transic' in col_lower or 'trancis' in col_lower:
+            numeric_columns.append(col)
+            grade_mapping[col] = 'T'
+            print(f"   ✓ Encontrada: '{col}' → Transición")
+        # Grados 1-11
+        elif col_stripped in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']:
+            numeric_columns.append(col)
+            grade_mapping[col] = col_stripped
             print(f"   ✓ Encontrada: '{col}'")
     
     if len(numeric_columns) == 0:
@@ -67,12 +87,28 @@ def extract_matricula_data():
     
     dim_grados = pd.DataFrame([
         {
+            'grado_codigo': 'PJ',
+            'grado_nombre': 'Prejardín',
+            'grado_numero': -2,
+            'nivel_educativo': 'Preescolar',
+            'orden': -2,
+            'descripcion': 'Grado de prejardín (primera infancia)'
+        },
+        {
+            'grado_codigo': 'J',
+            'grado_nombre': 'Jardín',
+            'grado_numero': -1,
+            'nivel_educativo': 'Preescolar',
+            'orden': -1,
+            'descripcion': 'Grado de jardín (primera infancia)'
+        },
+        {
             'grado_codigo': 'T',
             'grado_nombre': 'Transición',
             'grado_numero': 0,
             'nivel_educativo': 'Preescolar',
             'orden': 0,
-            'descripcion': 'Grado de transición o jardín'
+            'descripcion': 'Grado de transición (preparación para primaria)'
         },
         {
             'grado_codigo': '1',
@@ -188,7 +224,9 @@ def extract_matricula_data():
         dane = row[dane_col] if dane_col else f"INST_{idx+1}"
         
         for col in numeric_columns:
-            grado_codigo = col.strip()
+            # Obtener código de grado del mapeo
+            grado_codigo = grade_mapping.get(col, str(col).strip())
+            
             cantidad_str = row[col]
             
             # Convertir a número
